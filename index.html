@@ -32,7 +32,8 @@
     <div class="cursor-inner" id="cursor-inner"></div>
     <div class="cursor-outer" id="cursor-outer"></div>
 
-    <div class="navbar" id="navbar">
+    <!-- Flex layout forces available badge all the way left and navigation links right -->
+    <div class="navbar" id="navbar" style="display: flex !important; align-items: center !important; justify-content: space-between !important; padding: 0 40px !important; box-sizing: border-box !important;">
       
       <!-- Animation styles for the pulsing status dot -->
       <style>
@@ -54,27 +55,22 @@
         }
       </style>
 
-      <!-- Left Side: Status Badge -->
-      <div style="display: inline-flex; align-items: center; background: transparent; border: none;">
-        <ul style="display: flex; align-items: center; margin: 0; padding: 0; list-style: none;">
-          <li style="display: inline-flex; align-items: center; gap: 10px; pointer-events: none;">
+      <!-- Left Side: Status Badge isolated from tabs wrapper -->
+      <div style="display: inline-flex !important; align-items: center !important; background: transparent !important; border: none !important;">
+        <ul style="display: flex !important; align-items: center !important; margin: 0 !important; padding: 0 !important; list-style: none !important;">
+          <li style="display: inline-flex !important; align-items: center !important; gap: 10px !important; pointer-events: none !important;">
             <!-- The Core Dot -->
-            <span class="forced-dot" style="position: relative; display: inline-block; width: 10px; height: 10px; background: #bc13fe; border-radius: 50%; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe; transform: translateY(-1px);"></span>
-            <a style="color: #bc13fe !important; padding: 0; text-decoration: none; font-family: 'Fira Code', monospace;">
+            <span class="forced-dot" style="position: relative !important; display: inline-block !important; width: 10px !important; height: 10px !important; background: #bc13fe !important; border-radius: 50% !important; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe !important; transform: translateY(-1px);"></span>
+            <a style="color: #bc13fe !important; padding: 0 !important; text-decoration: none !important; font-family: 'Fira Code', monospace !important; font-weight: bold !important;">
               &#60;/AVAILABLE&#62;
             </a>
           </li>
         </ul>
       </div>
 
-      <!-- Center Logo space -->
-      <div class="logo" tabindex="0" aria-label="Mira AlSaqer logo">
-        <div class="logo-top"></div>
-      </div>
-
-      <!-- Right Side: Navigation Links -->
-      <div class="navbar-tabs" id="navbar-tabs">
-        <ul class="navbar-tabs-ul">
+      <!-- Right Side: Navigation Links wrapped tightly together -->
+      <div class="navbar-tabs" id="navbar-tabs" style="margin-left: auto !important; position: relative !important; float: none !important; left: auto !important;">
+        <ul class="navbar-tabs-ul" style="display: flex !important; gap: 20px !important; margin: 0 !important; padding: 0 !important;">
           <li class="home activeThistab" data-aos="fade-down" data-aos-delay="100">
             <a href="#home" tabindex="0" aria-label="Home menu button">
               &#60;/Home&#62;
@@ -100,7 +96,6 @@
           </li>
         </ul>
       </div>
-      <!-- navbar tabs ends -->
     </div>
   </header>
   <!-- header ends here -->
@@ -267,40 +262,41 @@
           <p class="sectionHeadingP"></p>
         </div>
 
-        <div class="frontend-dev-section">
+        <div class="frontend-dev-section" style="width: 100% !important; display: flex !important; flex-direction: column !important; align-items: center !important;">
           <h3 class="frontend-dev-heading" data-aos="fade-up" tabindex="0" aria-label="Tech Stack Skills">
             Tech Stack
           </h3>
           
-          <ul class="tech-stack-wrapper">
+          <!-- Unified Grid layout balancing row/column spacing evenly, centered perfectly with increased box dimensions -->
+          <ul class="tech-stack-wrapper" style="display: grid !important; grid-template-columns: repeat(3, 140px) !important; gap: 24px !important; justify-content: center !important; width: auto !important; max-width: 100% !important; padding: 0 !important; margin: 30px auto 0 auto !important; box-sizing: border-box !important; list-style: none !important;">
             
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/C.png" alt="C skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
+            <li class="tech-stack-box" data-aos="fade-up" style="width: 140px !important; height: 140px !important; display: flex !important; justify-content: center !important; align-items: center !important; margin: 0 !important;">
+              <img src="./src/png/C.png" alt="C skill" class="tech-stack-logo" style="width: 85px !important; height: 85px !important; object-fit: contain !important;" onerror="this.src='./src/png/jslogo.png'"/>
               <span class="tooltip">C</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/Csharp.png" alt="C# skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
+            <li class="tech-stack-box" data-aos="fade-up" style="width: 140px !important; height: 140px !important; display: flex !important; justify-content: center !important; align-items: center !important; margin: 0 !important;">
+              <img src="./src/png/Csharp.png" alt="C# skill" class="tech-stack-logo" style="width: 85px !important; height: 85px !important; object-fit: contain !important;" onerror="this.src='./src/png/jslogo.png'"/>
               <span class="tooltip">C#</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/Java.png" alt="Java skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
+            <li class="tech-stack-box" data-aos="fade-up" style="width: 140px !important; height: 140px !important; display: flex !important; justify-content: center !important; align-items: center !important; margin: 0 !important;">
+              <img src="./src/png/Java.png" alt="Java skill" class="tech-stack-logo" style="width: 85px !important; height: 85px !important; object-fit: contain !important;" onerror="this.src='./src/png/jslogo.png'"/>
               <span class="tooltip">JAVA</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/Unity.png" alt="Unity skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
+            <li class="tech-stack-box" data-aos="fade-up" style="width: 140px !important; height: 140px !important; display: flex !important; justify-content: center !important; align-items: center !important; margin: 0 !important;">
+              <img src="./src/png/Unity.png" alt="Unity skill" class="tech-stack-logo" style="width: 85px !important; height: 85px !important; object-fit: contain !important;" onerror="this.src='./src/png/jslogo.png'"/>
               <span class="tooltip">UNITY</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/Unreal.png" alt="Unreal Engine skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
+            <li class="tech-stack-box" data-aos="fade-up" style="width: 140px !important; height: 140px !important; display: flex !important; justify-content: center !important; align-items: center !important; margin: 0 !important;">
+              <img src="./src/png/Unreal.png" alt="Unreal Engine skill" class="tech-stack-logo" style="width: 85px !important; height: 85px !important; object-fit: contain !important;" onerror="this.src='./src/png/jslogo.png'"/>
               <span class="tooltip">UNREAL</span>
             </li>
 
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/Godot.png" alt="Godot skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
+            <li class="tech-stack-box" data-aos="fade-up" style="width: 140px !important; height: 140px !important; display: flex !important; justify-content: center !important; align-items: center !important; margin: 0 !important;">
+              <img src="./src/png/Godot.png" alt="Godot skill" class="tech-stack-logo" style="width: 85px !important; height: 85px !important; object-fit: contain !important;" onerror="this.src='./src/png/jslogo.png'"/>
               <span class="tooltip">GODOT</span>
             </li>
 
@@ -576,9 +572,6 @@
 
       cursorInner.style.left = `${posX}px`;
       cursorInner.style.top = `${posY}px`;
-
-      // cursorOuter.style.left = `${posX}px`;
-      // cursorOuter.style.top = `${posY}px`;
 
       cursorOuter.animate(
         {
