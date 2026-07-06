@@ -31,145 +31,72 @@
   <header>
     <div class="cursor-inner" id="cursor-inner"></div>
     <div class="cursor-outer" id="cursor-outer"></div>
-    <div class="navbar" id="navbar">
 
+    <div class="navbar" id="navbar">
+      
       <!-- Animation styles for the pulsing status dot -->
       <style>
-
         @keyframes customPulseGlow {
-
           0% { transform: scale(1); opacity: 0.8; }
-
           70% { transform: scale(2.8); opacity: 0; }
-
           100% { transform: scale(1); opacity: 0; }
-
         }
-
         .forced-dot::before {
-
           content: '' !important;
-
           position: absolute !important;
-
           top: 0 !important;
-
           left: 0 !important;
-
           width: 100% !important;
-
           height: 100% !important;
-
           border-radius: 50% !important;
-
           background: inherit !important;
-
           animation: customPulseGlow 2s infinite ease-out !important;
-
         }
-
       </style>
 
-
-
-      <!-- Status Badge Container shifted all the way to the left using margin-right: auto -->
-
-      <div class="navbar-tabs" style="display: inline-flex !important; align-items: center !important; background: transparent !important; border: none !important; margin-right: auto !important;">
-
-        <ul class="navbar-tabs-ul" style="display: flex !important; align-items: center !important; margin: 0 !important; padding: 0 !important;">
-
-          <li style="display: inline-flex !important; align-items: center !important; gap: 10px !important; pointer-events: none !important;">
-
-            <!-- The Core Dot -->
-
-            <span class="forced-dot" style="position: relative !important; display: inline-block !important; width: 10px !important; height: 10px !important; background: #bc13fe !important; border-radius: 50% !important; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe !important; transform: translateY(-1px);"></span>
-
-            
-
-            <!-- Link styling copy to exactly match font size and style of Home/About buttons -->
-
-            <a style="color: #bc13fe !important; padding: 0 !important; text-decoration: none !important;">
-
-              AVAILABLE
-
-            </a>
-
-          </li>
-
-        </ul>
-
-      </div>
-
-
-
       <div class="logo" tabindex="0" aria-label="Mira AlSaqer logo">
-
         <div class="logo-top">
-
           <!-- Avatar image removed for a cleaner look -->
-
         </div>
-
       </div>
-
+      
       <div class="navbar-tabs" id="navbar-tabs">
-
         <ul class="navbar-tabs-ul">
+          <li style="display: inline-flex !important; align-items: center !important; gap: 10px !important; pointer-events: none !important;" data-aos="fade-down" data-aos-delay="100">
+            <!-- The Core Dot -->
+            <span class="forced-dot" style="position: relative !important; display: inline-block !important; width: 10px !important; height: 10px !important; background: #bc13fe !important; border-radius: 50% !important; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe !important; transform: translateY(-1px);"></span>
+            <a style="color: #bc13fe !important; padding: 0 !important; text-decoration: none !important;">
+              &#60;/AVAILABLE&#62;
+            </a>
+          </li>
 
-          <li class="home activeThistab" data-aos="fade-down" data-aos-delay="100">
-
+          <li class="home activeThistab" data-aos="fade-down" data-aos-delay="300">
             <a href="#home" tabindex="0" aria-label="Home menu button">
-
               &#60;/Home&#62;
-
             </a>
-
           </li>
 
-
-
-          <li class="about" data-aos="fade-down" data-aos-delay="300">
-
+          <li class="about" data-aos="fade-down" data-aos-delay="500">
             <a href="#about" aria-label="about menu button">
-
               &#60;/AboutMe&#62;
-
             </a>
-
           </li>
 
-
-
-          <li class="skills" data-aos="fade-down" data-aos-delay="500">
-
+          <li class="skills" data-aos="fade-down" data-aos-delay="700">
             <a href="#skills" aria-label="skills menu button">
-
               &#60;/Skills&#62;
-
             </a>
-
           </li>
 
-
-
-          <li class="projects" data-aos="fade-down" data-aos-delay="700">
-
+          <li class="projects" data-aos="fade-down" data-aos-delay="900">
             <a href="#projects" aria-label="projects menu button">
-
               &#60;/Projects&#62;
-
             </a>
-
           </li>
-
         </ul>
-
       </div>
-
       <!-- navbar tabs ends -->
-
     </div>
-
   </header>
   <!-- header ends here -->
 
@@ -376,6 +303,7 @@
     </section>
     <!-- skills section ends -->
 
+    <!-- ==================== PROJECTS SECTION ==================== -->
     <section class="projects-section-container" id="projects">
       <div class="projects-section-div">
         <div class="section-heading" data-aos="fade-up">
@@ -384,32 +312,60 @@
           </h2>
           <p class="sectionHeadingP"></p>
         </div>
-        <div class="project-boxes-div">
-          <div data-aos="fade-up" class="project-box-wrapper">
-            <div class="project-box project-box2" id="project-box2">
-              <div class="info-div">
-                <img src="src/webp/asher-favicon.webp" alt="atomic asher website favicon" class="faviconforProject" />
-                <article class="ProjectHeading">Atomic Asher Official Website</article>
-                <p class="ProjectDescription">
-                  Atomic Asher: A sleek and modern company website built to reflect their mission, team, and work through a clean and professional digital presence.
+        
+        <div class="project-boxes-div" style="display: flex !important; flex-wrap: wrap !important; justify-content: center !important; gap: 30px !important;">
+          
+          <!-- PROJECT CARD 1: "Maybe" (Active Video Layout) -->
+          <div data-aos="fade-up" class="project-box-wrapper" style="width: 100% !important; max-width: 460px !important;">
+            <div class="project-box" style="display: flex !important; flex-direction: column !important; width: 100% !important; height: auto !important; padding: 0 !important; overflow: hidden !important; border-radius: 12px !important; background: #11101d !important;">
+              
+              <!-- Video Block on Top -->
+              <div class="project-video-container" style="width: 100% !important; position: relative !important; padding-bottom: 56.25% !important; height: 0 !important; overflow: hidden !important; background: #000 !important;">
+                <iframe 
+                  style="position: absolute !important; top: 0 !important; left: 0 !important; width: 100% !important; height: 100% !important; border: none !important;"
+                  src="https://www.youtube.com/embed/t4ZymwuNJZY?autoplay=1&mute=1&loop=1&playlist=t4ZymwuNJZY&controls=1" 
+                  title="Maybe Game Preview"
+                  allow="autoplay; encrypted-media" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+
+              <!-- Information Details Area -->
+              <div class="info-div" style="width: 100% !important; padding: 25px !important; box-sizing: border-box !important; display: flex !important; flex-direction: column !important; align-items: flex-start !important;">
+                <img src="src/webp/asher-favicon.webp" alt="Maybe project icon" class="faviconforProject" style="margin-bottom: 10px !important;" />
+                
+                <!-- Game Title -->
+                <h3 class="ProjectHeading" style="font-size: 2rem !important; font-weight: bold !important; margin: 0 0 5px 0 !important; color: #fff !important; font-family: 'Orbitron', sans-serif !important;">
+                  Maybe
+                </h3>
+                
+                <!-- Engine Subtitle Label -->
+                <p style="font-size: 0.9rem !important; color: #bc13fe !important; font-family: 'Fira Code', monospace !important; margin: 0 0 15px 0 !important; font-weight: 600 !important;">
+                  Unity VR
                 </p>
-                <div class="project-buttons">
-                  <a href="https://atomicasher.com" target="_blank" class="cta"
-                    aria-label="Visit atomicasher Live">
-                    <span>Live view</span>
-                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                
+                <!-- Game Description -->
+                <p class="ProjectDescription" style="margin: 0 0 20px 0 !important; line-height: 1.5 !important; color: #b5b3cd !important;">
+                  A psychological VR interactive developed within a tight five-day timeline. The project focuses on rapid prototyping, leveraging immersion frameworks, and building system logic from scratch to explore environmental dread.
+                </p>
+                
+                <!-- Folder Access Button -->
+                <div class="project-buttons" style="margin-top: auto !important; width: 100% !important;">
+                  <a href="documents/maybe/" target="_blank" class="cta" aria-label="Open Project Documentation Folder" style="display: inline-flex !important; align-items: center !important;">
+                    <span>View Project Files</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px" style="margin-left: 8px !important;">
                       <path d="M1,5 L11,5"></path>
                       <polyline points="8 1 12 5 8 9"></polyline>
                     </svg>
                   </a>
                 </div>
               </div>
-              <div class="image-div">
-                <img src="src/webp/asher-preview.webp" alt="atomicasher website preview image" />
-              </div>
+
             </div>
           </div>
+          
           <!-- ---------------------- -->
+          <!-- PROJECT CARD 2 (Unchanged Placeholder) -->
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
@@ -435,6 +391,7 @@
             </div>
           </div>
           <!-- ---------------------- -->
+          <!-- PROJECT CARD 3 (Unchanged Placeholder) -->
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
@@ -464,6 +421,7 @@
             </div>
           </div>
           <!-- ---------------------- -->
+          <!-- PROJECT CARD 4 (Unchanged Placeholder) -->
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
@@ -489,6 +447,7 @@
             </div>
           </div>
           <!-- ---------------------- -->
+          <!-- PROJECT CARD 5 (Unchanged Placeholder) -->
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
@@ -519,6 +478,7 @@
             </div>
           </div>
           <!-- --------------------- -->
+          <!-- PROJECT CARD 6 (Unchanged Placeholder) -->
           <div data-aos="fade-up" class="project-box-wrapper">
             <div class="project-box project-box2" id="project-box2">
               <div class="info-div">
