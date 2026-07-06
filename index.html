@@ -33,10 +33,46 @@
     <div class="cursor-outer" id="cursor-outer"></div>
 
     <div class="navbar" id="navbar">
-      <!-- Replaced 'Hello!' with a pulsing, glowing 'Available for Work' badge -->
-      <div class="status-badge-container">
-        <span class="status-dot"></span>
-        <span class="status-text">AVAILABLE</span>
+      
+      <!-- Injecting the custom style rules directly so they override any external CSS blocks instantly -->
+      <style>
+        @keyframes customPulseGlow {
+          0% {
+            transform: scale(1);
+            opacity: 0.8;
+          }
+          70% {
+            transform: scale(2.8);
+            opacity: 0;
+          }
+          100% {
+            transform: scale(1);
+            opacity: 0;
+          }
+        }
+        .forced-dot::before {
+          content: '' !important;
+          position: absolute !important;
+          top: 0 !important;
+          left: 0 !important;
+          width: 100% !important;
+          height: 100% !important;
+          border-radius: 50% !important;
+          background: inherit !important;
+          animation: customPulseGlow 2s infinite ease-out !important;
+        }
+      </style>
+
+      <!-- Status Badge Container with your matching theme styles -->
+      <div class="status-badge-container" style="display: inline-flex !important; align-items: center !important; gap: 8px !important; background: transparent !important; border: none !important;">
+        
+        <!-- The Core Dot holding the shadow and forced pseudo-layer animation -->
+        <span class="forced-dot" style="position: relative !important; display: inline-block !important; width: 10px !important; height: 10px !important; background: #bc13fe !important; border-radius: 50% !important; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe !important;"></span>
+        
+        <!-- Text configured to precisely match your template's Navbar items -->
+        <span class="status-text" style="color: #bc13fe !important; font-family: 'Fira Code', monospace !important; font-size: inherit !important; font-weight: inherit !important; letter-spacing: inherit !important; text-transform: uppercase !important;">
+          Available for work
+        </span>
       </div>
 
       <div class="logo" tabindex="0" aria-label="Mira AlSaqer logo">
