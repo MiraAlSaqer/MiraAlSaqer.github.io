@@ -1,0 +1,45 @@
+Maybe
+
+Maybe is a psychological VR interactive short game where the player explores an atmospheric, looping memory space to uncover the lifetime regrets of an old man. Players interact with childhood relics to unlock comforting past memories before descending down a dark hallway where physical and audio-guided milestones reveal past conflicts. The game tracks user choices to dynamically alter dialogue paths, culminating in a reflective, clear field scene that provides visual closure to their specific psychological path.
+
+Core Scripts
+
+GameManager
+
+Serves as the persistent global state controller across the entire runtime architecture, tracking player interaction flags and registering initial object choices to write persistent data variables that dictate dynamic narrative profiles.
+
+VRSceneLoader
+
+Initiates cross scene deployment and headset tracking stabilization by safely terminating active background routines on transition, handling screen-space hardware fade masks, and managing asynchronous loading pipelines between memory spaces.
+
+PorchManager
+
+Manages scene progression and localized audio tracks during the porch memory, utilizing flat 2D vector distance calculations to track structural boundaries regardless of variable player headset height.
+
+Umbrella
+
+Handles contextual object interaction loops by connecting to XR Toolkit controller trigger activations, executing a performance optimized mesh swapping pattern to toggle open visuals and alerting progression managers.
+
+HallwayManager
+
+Orchestrates the dynamic narrative branching engine by reading profile data from the global state, using linear time deltas to drive screen fades alongside a procedural probability gate that triggers a high frequency horizontal UI screen jitter.
+
+RewindManager
+
+Functions as a localized finite state machine that gates storyline progression through sequential integer steps, securely unlocking level triggers and accepting incoming callback handshakes from external solved interactive elements.
+
+PlateSwitcher
+
+Controls the local mesh state swap pattern on the kitchen table asset, instantly toggling between broken and repaired items while executing runtime object lookups to notify the master timeline controller.
+
+DoorSensor
+
+Implements a spatial physics trigger intersection gate that screens out false tracking data from the player's headset or controllers, instantly neutralizing rigid body kinetic velocity on target impact to lock physical assets.
+
+ChairInteraction
+
+Drives the camera relative offset alignment matrix, calculating a directional translation vector between the tracking camera and target prop to smoothly glide the play space origin before executing a local height reduction to simulate a seated posture.
+
+FieldSceneManager
+
+Acts as the final timeline conductor of the game, dynamically instantiating the specific psychological path relic from global state storage before executing a synchronized logarithmic cross fade across credits text arrays and audio decks.
