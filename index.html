@@ -54,26 +54,25 @@
         }
       </style>
 
-      <!-- Status Badge Container shifted all the way to the left using margin-right: auto -->
-      <div class="navbar-tabs" style="display: inline-flex !important; align-items: center !important; background: transparent !important; border: none !important; margin-right: auto !important;">
-        <ul class="navbar-tabs-ul" style="display: flex !important; align-items: center !important; margin: 0 !important; padding: 0 !important;">
-          <li style="display: inline-flex !important; align-items: center !important; gap: 10px !important; pointer-events: none !important;">
+      <!-- Left Side: Status Badge -->
+      <div style="display: inline-flex; align-items: center; background: transparent; border: none;">
+        <ul style="display: flex; align-items: center; margin: 0; padding: 0; list-style: none;">
+          <li style="display: inline-flex; align-items: center; gap: 10px; pointer-events: none;">
             <!-- The Core Dot -->
-            <span class="forced-dot" style="position: relative !important; display: inline-block !important; width: 10px !important; height: 10px !important; background: #bc13fe !important; border-radius: 50% !important; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe !important; transform: translateY(-1px);"></span>
-            
-            <!-- Link styling copy to exactly match font size and style of Home/About buttons -->
-            <a style="color: #bc13fe !important; padding: 0 !important; text-decoration: none !important;">
+            <span class="forced-dot" style="position: relative; display: inline-block; width: 10px; height: 10px; background: #bc13fe; border-radius: 50%; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe; transform: translateY(-1px);"></span>
+            <a style="color: #bc13fe !important; padding: 0; text-decoration: none; font-family: 'Fira Code', monospace;">
               &#60;/AVAILABLE&#62;
             </a>
           </li>
         </ul>
       </div>
 
+      <!-- Center Logo space -->
       <div class="logo" tabindex="0" aria-label="Mira AlSaqer logo">
-        <div class="logo-top">
-          <!-- Avatar image removed for a cleaner look -->
-        </div>
+        <div class="logo-top"></div>
       </div>
+
+      <!-- Right Side: Navigation Links -->
       <div class="navbar-tabs" id="navbar-tabs">
         <ul class="navbar-tabs-ul">
           <li class="home activeThistab" data-aos="fade-down" data-aos-delay="100">
@@ -273,10 +272,8 @@
             Tech Stack
           </h3>
           
-          <!-- Adjusted grid gap property to sharply compress vertical row space (5px) while preserving side gap (20px) -->
-          <ul class="tech-stack-wrapper" style="display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 5px 20px !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;">
+          <ul class="tech-stack-wrapper">
             
-            <!-- Row 1: Languages -->
             <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/C.png" alt="C skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
               <span class="tooltip">C</span>
@@ -292,7 +289,6 @@
               <span class="tooltip">JAVA</span>
             </li>
 
-            <!-- Row 2: Engines -->
             <li class="tech-stack-box" data-aos="fade-up">
               <img src="./src/png/Unity.png" alt="Unity skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
               <span class="tooltip">UNITY</span>
