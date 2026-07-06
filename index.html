@@ -32,7 +32,8 @@
     <div class="cursor-inner" id="cursor-inner"></div>
     <div class="cursor-outer" id="cursor-outer"></div>
 
-    <div class="navbar" id="navbar">
+    <!-- Added relative positioning to parent container to serve as an anchor point -->
+    <div class="navbar" id="navbar" style="position: relative !important;">
       
       <!-- Animation styles for the pulsing status dot -->
       <style>
@@ -60,19 +61,18 @@
         </div>
       </div>
 
-      <div class="navbar-tabs" id="navbar-tabs" style="width: 100% !important; max-width: 100% !important; padding: 0 20px !important; box-sizing: border-box !important;">
-        <ul class="navbar-tabs-ul" style="display: flex !important; width: 100% !important; align-items: center !important;">
-          
-          <!-- AVAILABLE BADGE: Placed first with auto margin to push everything else right -->
-          <li style="display: inline-flex !important; align-items: center !important; gap: 10px !important; pointer-events: none !important; margin-right: auto !important;" data-aos="fade-down" data-aos-delay="100">
-            <!-- The Core Dot -->
-            <span class="forced-dot" style="position: relative !important; display: inline-block !important; width: 10px !important; height: 10px !important; background: #bc13fe !important; border-radius: 50% !important; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe !important; transform: translateY(-1px);"></span>
-            
-            <a style="color: #bc13fe !important; padding: 0 !important; text-decoration: none !important;">
-              &#60;/AVAILABLE&#62;
-            </a>
-          </li>
+      <!-- Isolated Status Badge forced to absolute left boundary of the screen/container -->
+      <div style="position: absolute !important; left: 40px !important; top: 50% !important; transform: translateY(-50%) !important; display: inline-flex !important; align-items: center !important; gap: 10px !important; pointer-events: none !important; z-index: 10 !important;" data-aos="fade-down" data-aos-delay="100">
+        <!-- The Core Dot -->
+        <span class="forced-dot" style="position: relative !important; display: inline-block !important; width: 10px !important; height: 10px !important; background: #bc13fe !important; border-radius: 50% !important; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe !important; transform: translateY(-1px);"></span>
+        
+        <a style="color: #bc13fe !important; padding: 0 !important; text-decoration: none !important; font-family: 'Fira Code', monospace !important;">
+          AVAILABLE
+        </a>
+      </div>
 
+      <div class="navbar-tabs" id="navbar-tabs">
+        <ul class="navbar-tabs-ul">
           <li class="home activeThistab" data-aos="fade-down" data-aos-delay="200">
             <a href="#home" tabindex="0" aria-label="Home menu button">
               &#60;/Home&#62;
