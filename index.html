@@ -122,7 +122,7 @@
           <p class="jello">a</p>
           <p class="jello">b</p>
           <p class="jello">a</p>
-          <p class="jello">,</p>
+          <p class="jello" class="planetary">,</p>
           &nbsp;
           <p class="jello">I</p>
           <p class="jello">'</p>
@@ -190,19 +190,24 @@
           <p class="sectionHeadingP"></p>
         </div>
 
-        <!-- Stretched max-width to 100% to let the text flow fluidly across the space where the photo was -->
-        <div class="info-dp-section" style="display: block; width: 100%; max-width: 100%; margin: 0 auto;">
-          <div class="about-info" style="width: 100%; padding-right: 0;">
-            <!-- Used class="info-para" to perfectly force the exact native top font style, and added custom tight margins -->
-            <p tabindex="0" class="info-para" id="info-para" style="margin-bottom: 0.8rem; max-width: 100%;">
+        <!-- Overrode global flex restrictions to force the container to expand fluidly across the space -->
+        <div class="info-dp-section" style="display: block; width: 100%; max-width: 100%; min-width: 100%;">
+          <!-- Set about-info column layout width to 100% to fill the right emptiness -->
+          <div class="about-info" style="width: 100%; max-width: 100%; padding-right: 0; display: block;">
+            
+            <!-- Removed text formatting remnants and reduced paragraph margins down to 12px (0.75rem) -->
+            <p tabindex="0" class="info-para" id="info-para" style="max-width: 100%; margin-bottom: 0.75rem;">
               Hi! My name is Mira. I am a game development student at HTU with a deep rooted passion for bringing interactive worlds to life. My journey with video games started when I was very young, playing through different worlds and slowly developing an inkling passion to create them myself, to allow others to experience the same feelings I did through my work. Whether it is a full prototype or a quick mechanical project, I love the process of building systems from the ground up.
             </p>
-            <p tabindex="0" class="info-para" id="info-para" style="margin-bottom: 0.8rem; max-width: 100%;">
+            
+            <p tabindex="0" class="info-para" id="info-para" style="max-width: 100%; margin-bottom: 0.75rem;">
               I have always loved exploring a vast variety of game genres, which drives me to constantly experiment with distinct features and design elements. I naturally gravitate toward charming themes involving psychology, animals, and food, and I find immense fulfillment when my projects carry a meaningful personal touch derived from the things I love.
             </p>
-            <p tabindex="0" class="info-para" id="info-para" style="margin-bottom: 2.5rem; max-width: 100%;">
+            
+            <p tabindex="0" class="info-para" id="info-para" style="max-width: 100%; margin-bottom: 2rem;">
               These days, my main focus is entirely on sharpening my programming abilities, pushing my prototyping skills forward, and mastering new workflows. I am a firm believer that with the right assets, deep focus, and an ample amount of time, I can confidently turn any creative concept into a polished, functional reality.
             </p>
+            
              <!-- Resume button -->
             <button class="resume-btn" id="resume-btn" onclick="openURL()">
               <div class="sign">
@@ -475,7 +480,6 @@
       </div>
     </section>
   </main>
-  <!-- main ends here -->
 
   <footer id="footer">
     <button class="fas" id="backtotopbutton" onclick="scrolltoTopfunction()">
