@@ -37,9 +37,18 @@
       <!-- Animation styles for the pulsing status dot -->
       <style>
         @keyframes customPulseGlow {
-          0% { transform: scale(1); opacity: 0.8; }
-          70% { transform: scale(2.8); opacity: 0; }
-          100% { transform: scale(1); opacity: 0; }
+          0% {
+            transform: scale(1);
+            opacity: 0.8;
+          }
+          70% {
+            transform: scale(2.8);
+            opacity: 0;
+          }
+          100% {
+            transform: scale(1);
+            opacity: 0;
+          }
         }
         .forced-dot::before {
           content: '' !important;
@@ -54,19 +63,16 @@
         }
       </style>
 
-      <!-- Status Badge Container perfectly inheriting template text sizing -->
-      <div class="navbar-tabs" style="display: inline-flex !important; align-items: center !important; background: transparent !important; border: none !important;">
-        <ul class="navbar-tabs-ul" style="display: flex !important; align-items: center !important; margin: 0 !important; padding: 0 !important;">
-          <li style="display: inline-flex !important; align-items: center !important; gap: 10px !important; pointer-events: none !important;">
-            <!-- The Core Dot -->
-            <span class="forced-dot" style="position: relative !important; display: inline-block !important; width: 10px !important; height: 10px !important; background: #bc13fe !important; border-radius: 50% !important; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe !important; transform: translateY(-1px);"></span>
-            
-            <!-- Link styling copy to exactly match font size and style of Home/About buttons -->
-            <a style="color: #bc13fe !important; padding: 0 !important; text-decoration: none !important;">
-              &#60;AVAILABLE&#62;
-            </a>
-          </li>
-        </ul>
+      <!-- Status Badge Container aligned cleanly inside your header bar layout -->
+      <div class="status-badge-container" style="display: inline-flex !important; align-items: center !important; gap: 8px !important; background: transparent !important; border: none !important;">
+        
+        <!-- The Core Dot holding the shadow and active pulse logic -->
+        <span class="forced-dot" style="position: relative !important; display: inline-block !important; width: 10px !important; height: 10px !important; background: #bc13fe !important; border-radius: 50% !important; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe !important;"></span>
+        
+        <!-- Text configured to precisely match your template's Navbar links text size, tags, and font-family style -->
+        <span class="status-text" style="color: #bc13fe !important; font-family: inherit !important; font-size: 1rem !important; font-weight: inherit !important; letter-spacing: inherit !important; text-transform: uppercase !important;">
+          AVAILABLE
+        </span>
       </div>
 
       <div class="logo" tabindex="0" aria-label="Mira AlSaqer logo">
@@ -228,17 +234,18 @@
         </div>
 
         <div class="info-dp-section" style="display: block; width: 100%; max-width: 100%; min-width: 100%;">
-          <div class="about-info" style="width: 100% !important; max-width: 100% !important; padding-right: 0 !important; display: block !important;">
+          <div class="about-info" style="width: 100%; max-width: 100%; padding-right: 0; display: block;">
             
-            <p tabindex="0" class="info-para" id="info-para1" style="max-width: 100%; margin-bottom: 1.5rem; line-height: 1.6;">
+            <!-- Increased spacing to 1.5rem to give paragraphs breathing room -->
+            <p tabindex="0" class="info-para" id="info-para1" style="max-width: 100%; margin-bottom: 2rem; line-height: 1.6;">
               Hi! My name is Mira. I am a game development student at HTU with a deep rooted passion for bringing interactive worlds to life. My journey with video games started when I was very young, playing through different worlds and slowly developing an inkling passion to create them myself, to allow others to experience the same feelings I did through my work. Whether it is a full prototype or a quick mechanical project, I love the process of building systems from the ground up.
             </p>
             
-            <p tabindex="0" class="info-para" id="info-para2" style="max-width: 100%; margin-bottom: 1.5rem; line-height: 1.6;">
+            <p tabindex="0" class="info-para" id="info-para2" style="max-width: 100%; margin-bottom: 2rem; line-height: 1.6;">
               I have always loved exploring a vast variety of game genres, which drives me to constantly experiment with distinct features and design elements. I naturally gravitate toward charming themes involving psychology, animals, and food, and I find immense fulfillment when my projects carry a meaningful personal touch derived from the things I love.
             </p>
             
-            <p tabindex="0" class="info-para" id="info-para3" style="max-width: 100%; margin-bottom: 2.5rem; line-height: 1.6;">
+            <p tabindex="0" class="info-para" id="info-para3" style="max-width: 100%; margin-bottom: 2rem; line-height: 1.6;">
               These days, my main focus is entirely on sharpening my programming abilities, pushing my prototyping skills forward, and mastering new workflows. I am a firm believer that with the right assets, deep focus, and an ample amount of time, I can confidently turn any creative concept into a polished, functional reality.
             </p>
             
@@ -258,7 +265,6 @@
     </section>
     <!-- about section ends  -->
 
-    <!-- ==================== SKILLS SECTION ==================== -->
     <section class="skills-section-container" id="skills">
       <div class="skills-section">
         <div class="section-heading" data-aos="fade-up">
@@ -269,45 +275,74 @@
         </div>
 
         <div class="frontend-dev-section">
-          <h3 class="frontend-dev-heading" data-aos="fade-up" tabindex="0" aria-label="Tech Stack Skills">
+          <h3 class="frontend-dev-heading" data-aos="fade-up" tabindex="0"
+            aria-label="As a frontend a developer these are the skills i have">
             Tech Stack
           </h3>
-          
-          <!-- Overrode template container to strictly output a clean 3x3 grid layout -->
-          <ul class="tech-stack-wrapper" style="display: grid !important; grid-template-columns: repeat(3, 1fr) !important; gap: 20px !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;">
-            
-            <!-- Row 1: Languages -->
+          <ul class="tech-stack-wrapper">
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/C.png" alt="C skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
-              <span class="tooltip">C</span>
+              <img src="./src/png/htmllogo.png" alt="Html skill" class="tech-stack-logo" />
+              <span class="tooltip">HTML</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/C#.png" alt="C# skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
-              <span class="tooltip">C#</span>
+              <img src="./src/png/csslogo.png" alt="css skill" class="tech-stack-logo" />
+              <span class="tooltip">CSS</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/Java.png" alt="Java skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
-              <span class="tooltip">JAVA</span>
-            </li>
-
-            <!-- Row 2: Engines -->
-            <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/Unity.png" alt="Unity skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
-              <span class="tooltip">UNITY</span>
+              <img src="./src/png/jslogo.png" alt="js skill" class="tech-stack-logo" />
+              <span class="tooltip">JS</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/Unreal.png" alt="Unreal Engine skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
-              <span class="tooltip">UNREAL</span>
+              <img src="./src/png/tailwind.png" alt="tailwind skill" class="tech-stack-logo" />
+              <span class="tooltip">TAILWIND</span>
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/Godot.png" alt="Godot skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
-              <span class="tooltip">GODOT</span>
+              <img src="./src/png/reactlogo.png" alt="react skill" class="tech-stack-logo" />
+              <span class="tooltip">REACTJS</span>
             </li>
 
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/nextlogo.png" alt="nextjs skill" class="tech-stack-logo" />
+              <span class="tooltip">NEXTJS</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/node.png" alt="nodejs skill" class="tech-stack-logo" />
+              <span class="tooltip">NODEJS</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/astro.png" alt="astro skill" class="tech-stack-logo" />
+              <span class="tooltip">ASTRO</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/githublogo.png" alt="github skill" class="tech-stack-logo needtobeinvert" />
+              <span class="tooltip">GITHUB</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/gitlogo.png" alt="git skill" class="tech-stack-logo" />
+              <span class="tooltip">GIT</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/tinacms.png" alt="tinacms skill" class="tech-stack-logo" />
+              <span class="tooltip">TINACMS</span>
+            </li>
+
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/contentfulcms.png" alt="contentful skill" class="tech-stack-logo" />
+              <span class="tooltip">CONTENTFUL</span>
+            </li>
+            <li class="tech-stack-box" data-aos="fade-up">
+              <img src="./src/png/figmalogo.png" alt="figma skill" class="tech-stack-logo" />
+              <span class="tooltip">FIGMA</span>
+            </li>
           </ul>
         </div>
       </div>
