@@ -28,7 +28,7 @@
   <div id="preloader"></div>
   <noscript>Allow Javascript</noscript>
 
-  <header>
+ <header>
     <div class="cursor-inner" id="cursor-inner"></div>
     <div class="cursor-outer" id="cursor-outer"></div>
 
@@ -51,22 +51,6 @@
           border-radius: 50% !important;
           background: inherit !important;
           animation: customPulseGlow 2s infinite ease-out !important;
-        }
-        /* Specific non-button presentation styling for the status badge */
-        .status-badge-item {
-          display: inline-flex !important;
-          align-items: center !important;
-          gap: 8px !important;
-          pointer-events: none !important;
-          user-select: none !important;
-        }
-        .status-badge-text {
-          color: #bc13fe !important;
-          padding: 0 !important;
-          text-decoration: none !important;
-          font-family: 'Fira Code', monospace !important;
-          font-weight: bold !important;
-          letter-spacing: 1px;
         }
       </style>
 
@@ -102,15 +86,14 @@
             </a>
           </li>
 
-          <!-- Appears seamlessly inside the navbar tabs container, positioned on the far right -->
-          <li class="status-badge-item" data-aos="fade-down" data-aos-delay="900">
+          <!-- Reverted to native template button structure, placed perfectly on the right -->
+          <li style="display: inline-flex !important; align-items: center !important; gap: 10px !important; pointer-events: none !important;" data-aos="fade-down" data-aos-delay="900">
             <!-- The Core Dot -->
             <span class="forced-dot" style="position: relative !important; display: inline-block !important; width: 10px !important; height: 10px !important; background: #bc13fe !important; border-radius: 50% !important; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe !important; transform: translateY(-1px);"></span>
             
-            <!-- Plain text format to separate its identity cleanly from page buttons -->
-            <span class="status-badge-text">
-              AVAILABLE
-            </span>
+            <a style="color: #bc13fe !important; padding: 0 !important; text-decoration: none !important;">
+              &#60;/AVAILABLE&#62;
+            </a>
           </li>
         </ul>
       </div>
