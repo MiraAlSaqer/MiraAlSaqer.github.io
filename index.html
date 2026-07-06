@@ -32,7 +32,7 @@
     <div class="cursor-inner" id="cursor-inner"></div>
     <div class="cursor-outer" id="cursor-outer"></div>
 
-    <div class="navbar" id="navbar">
+    <div class="navbar" id="navbar" style="display: flex !important; justify-content: space-between !important; align-items: center !important; width: 100% !important;">
       
       <!-- Animation styles for the pulsing status dot -->
       <style>
@@ -54,15 +54,15 @@
         }
       </style>
 
-      <!-- Status Badge Container shifted all the way to the left using margin-right: auto -->
-      <div class="navbar-tabs" style="display: inline-flex !important; align-items: center !important; background: transparent !important; border: none !important; margin-right: auto !important;">
-        <ul class="navbar-tabs-ul" style="display: flex !important; align-items: center !important; margin: 0 !important; padding: 0 !important;">
+      <!-- Status Badge Container forced to the absolute far left -->
+      <div class="navbar-tabs" style="display: inline-flex !important; align-items: center !important; background: transparent !important; border: none !important; margin-right: auto !important; padding-left: 20px !important;">
+        <ul class="navbar-tabs-ul" style="display: flex !important; align-items: center !important; margin: 0 !important; padding: 0 !important; list-style: none !important;">
           <li style="display: inline-flex !important; align-items: center !important; gap: 10px !important; pointer-events: none !important;">
             <!-- The Core Dot -->
             <span class="forced-dot" style="position: relative !important; display: inline-block !important; width: 10px !important; height: 10px !important; background: #bc13fe !important; border-radius: 50% !important; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe !important; transform: translateY(-1px);"></span>
             
-            <!-- Link styling copy to exactly match font size and style of Home/About buttons -->
-            <a style="color: #bc13fe !important; padding: 0 !important; text-decoration: none !important;">
+            <!-- Link styling perfectly matching template text rules -->
+            <a style="color: #bc13fe !important; padding: 0 !important; text-decoration: none !important; font-family: inherit !important; font-size: inherit !important; font-weight: inherit !important; letter-spacing: inherit !important; text-transform: uppercase !important;">
               &#60;/AVAILABLE&#62;
             </a>
           </li>
@@ -273,7 +273,6 @@
             Tech Stack
           </h3>
           
-          <!-- Reverted back completely to standard template layout architecture -->
           <ul class="tech-stack-wrapper">
             
             <!-- Row 1: Languages -->
@@ -283,7 +282,7 @@
             </li>
 
             <li class="tech-stack-box" data-aos="fade-up">
-              <img src="./src/png/Csharp.png" alt="C# skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
+              <img src="./src/png/C#.png" alt="C# skill" class="tech-stack-logo" onerror="this.src='./src/png/jslogo.png'"/>
               <span class="tooltip">C#</span>
             </li>
 
