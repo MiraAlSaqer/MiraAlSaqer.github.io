@@ -41,74 +41,143 @@
       </div>
       
       <!-- Animation styles for the pulsing status dot -->
+
       <style>
+
         @keyframes customPulseGlow {
+
           0% { transform: scale(1); opacity: 0.8; }
+
           70% { transform: scale(2.8); opacity: 0; }
+
           100% { transform: scale(1); opacity: 0; }
+
         }
+
         .forced-dot::before {
+
           content: '' !important;
+
           position: absolute !important;
+
           top: 0 !important;
+
           left: 0 !important;
+
           width: 100% !important;
+
           height: 100% !important;
+
           border-radius: 50% !important;
+
           background: inherit !important;
+
           animation: customPulseGlow 2s infinite ease-out !important;
+
         }
+
       </style>
 
-      <div class="logo" tabindex="0" aria-label="Mira AlSaqer logo">
-        <div class="logo-top">
-          <!-- Avatar image removed for a cleaner look -->
-        </div>
-      </div>
+
+
+      <!-- Status Badge Container perfectly inheriting template text sizing -->
+
       <div class="navbar-tabs" style="display: inline-flex !important; align-items: center !important; background: transparent !important; border: none !important;">
+
         <ul class="navbar-tabs-ul" style="display: flex !important; align-items: center !important; margin: 0 !important; padding: 0 !important;">
+
           <li style="display: inline-flex !important; align-items: center !important; gap: 10px !important; pointer-events: none !important;">
 
             <!-- The Core Dot -->
 
             <span class="forced-dot" style="position: relative !important; display: inline-block !important; width: 10px !important; height: 10px !important; background: #bc13fe !important; border-radius: 50% !important; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe !important; transform: translateY(-1px);"></span>
 
-            <!-- Link styling copy to exactly match font size and style of Home/About buttons -->
             
+
+            <!-- Link styling copy to exactly match font size and style of Home/About buttons -->
+
             <a style="color: #bc13fe !important; padding: 0 !important; text-decoration: none !important;">
-              AVAILABLE
+
+              &#60;AVAILABLE&#62;
+
             </a>
+
           </li>
+
         </ul>
+
       </div>
 
-          <li class="home activeThistab" data-aos="fade-down" data-aos-delay="300">
+
+
+      <div class="logo" tabindex="0" aria-label="Mira AlSaqer logo">
+
+        <div class="logo-top">
+
+          <!-- Avatar image removed for a cleaner look -->
+
+        </div>
+
+      </div>
+
+      <div class="navbar-tabs" id="navbar-tabs">
+
+        <ul class="navbar-tabs-ul">
+
+          <li class="home activeThistab" data-aos="fade-down" data-aos-delay="100">
+
             <a href="#home" tabindex="0" aria-label="Home menu button">
+
               &#60;/Home&#62;
+
             </a>
+
           </li>
 
-          <li class="about" data-aos="fade-down" data-aos-delay="500">
+
+
+          <li class="about" data-aos="fade-down" data-aos-delay="300">
+
             <a href="#about" aria-label="about menu button">
+
               &#60;/AboutMe&#62;
+
             </a>
+
           </li>
 
-          <li class="skills" data-aos="fade-down" data-aos-delay="700">
+
+
+          <li class="skills" data-aos="fade-down" data-aos-delay="500">
+
             <a href="#skills" aria-label="skills menu button">
+
               &#60;/Skills&#62;
+
             </a>
+
           </li>
 
-          <li class="projects" data-aos="fade-down" data-aos-delay="900">
+
+
+          <li class="projects" data-aos="fade-down" data-aos-delay="700">
+
             <a href="#projects" aria-label="projects menu button">
+
               &#60;/Projects&#62;
+
             </a>
+
           </li>
+
         </ul>
+
       </div>
+
       <!-- navbar tabs ends -->
+
     </div>
+
   </header>
   <!-- header ends here -->
 
