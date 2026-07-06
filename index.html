@@ -28,7 +28,7 @@
   <div id="preloader"></div>
   <noscript>Allow Javascript</noscript>
 
- <header>
+  <header>
     <div class="cursor-inner" id="cursor-inner"></div>
     <div class="cursor-outer" id="cursor-outer"></div>
 
@@ -54,12 +54,26 @@
         }
       </style>
 
+      <!-- Status Badge Container shifted all the way to the left using margin-right: auto -->
+      <div class="navbar-tabs" style="display: inline-flex !important; align-items: center !important; background: transparent !important; border: none !important; margin-right: auto !important;">
+        <ul class="navbar-tabs-ul" style="display: flex !important; align-items: center !important; margin: 0 !important; padding: 0 !important;">
+          <li style="display: inline-flex !important; align-items: center !important; gap: 10px !important; pointer-events: none !important;">
+            <!-- The Core Dot -->
+            <span class="forced-dot" style="position: relative !important; display: inline-block !important; width: 10px !important; height: 10px !important; background: #bc13fe !important; border-radius: 50% !important; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe !important; transform: translateY(-1px);"></span>
+            
+            <!-- Link styling copy to exactly match font size and style of Home/About buttons -->
+            <a style="color: #bc13fe !important; padding: 0 !important; text-decoration: none !important;">
+              &#60;/AVAILABLE&#62;
+            </a>
+          </li>
+        </ul>
+      </div>
+
       <div class="logo" tabindex="0" aria-label="Mira AlSaqer logo">
         <div class="logo-top">
           <!-- Avatar image removed for a cleaner look -->
         </div>
       </div>
-      
       <div class="navbar-tabs" id="navbar-tabs">
         <ul class="navbar-tabs-ul">
           <li class="home activeThistab" data-aos="fade-down" data-aos-delay="100">
@@ -83,16 +97,6 @@
           <li class="projects" data-aos="fade-down" data-aos-delay="700">
             <a href="#projects" aria-label="projects menu button">
               &#60;/Projects&#62;
-            </a>
-          </li>
-
-          <!-- Reverted to native template button structure, placed perfectly on the right -->
-          <li style="display: inline-flex !important; align-items: center !important; gap: 10px !important; pointer-events: none !important;" data-aos="fade-down" data-aos-delay="900">
-            <!-- The Core Dot -->
-            <span class="forced-dot" style="position: relative !important; display: inline-block !important; width: 10px !important; height: 10px !important; background: #bc13fe !important; border-radius: 50% !important; box-shadow: 0 0 10px #bc13fe, 0 0 20px #bc13fe !important; transform: translateY(-1px);"></span>
-            
-            <a style="color: #bc13fe !important; padding: 0 !important; text-decoration: none !important;">
-              &#60;AVAILABLE&#62;
             </a>
           </li>
         </ul>
